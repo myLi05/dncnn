@@ -97,9 +97,9 @@ class DnCNN:
         self.sess.run(tf.global_variables_initializer())
 
     def train(self):
-        filepath = "C:/Users/limengyang/Desktop/cleandenoise//"
+        filepath = "./cleandenoise//"
         cleandata = os.listdir(filepath)
-        noisedata = os.listdir('C:/Users/limengyang/Desktop/noiseresult2')
+        noisedata = os.listdir('./noiseresult2')
         saver = tf.train.Saver()
         for epoch in range(50):
             for i in range(cleandata.__len__()//batch_size ):
